@@ -1,3 +1,5 @@
+package samsung;
+
 import java.util.*;
 import java.io.*;
 public class BOJ14889 {
