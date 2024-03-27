@@ -1,5 +1,5 @@
 import java.util.*;
-public class PGSM_Practice_Billiards {
+public class PGMS_Practice_Billiards {
     public static void main(String[] args) {
 
     }
