@@ -1,7 +1,7 @@
 import java.util.*;
 public class PGMS_Travel_Uninhabited_Island {
     public static void main(String[] args) {
-        System.out.println(solution(["X591","X1X5X","X231X","1XXX1"]));
+
     }
 
     static int[] dx = {1,0,-1,0};
