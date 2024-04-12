@@ -1,17 +1,15 @@
 import java.util.*;
 
-class Coordinate {
-    int x;
-    int y;
+public class CodeTree_MazeRunner {
+    static class Coordinate {
+        int x;
+        int y;
 
-    Coordinate(int x, int y) {
-        this.x = x;
-        this.y = y;
+        Coordinate(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
     }
-}
-
-public class CodeTree_MazePair {
-
 
     public static final int MAX_N = 10;
     public static int n, m, k;

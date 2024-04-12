@@ -1,41 +1,42 @@
 import java.io.*;
 import java.util.*;
 
-class Santa {
-    int x;
-    int y;
-
-    public Santa(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-}
-
-class Distance implements Comparable<Distance> {
-    int d;
-    int x;
-    int y;
-
-    public Distance(int d, int x, int y) {
-        this.d = d;
-        this.x = x;
-        this.y = y;
-    }
-
-    @Override
-    public int compareTo(Distance o) {
-        if (this.d != o.d) {
-            return this.d - o.d;
-        }
-        if (this.x != o.x) {
-            return o.x - x;
-        }
-        return o.y - this.y;
-    }
-
-}
 
 public class CodeTree_Revolution_Rudolf {
+    static class Santa {
+        int x;
+        int y;
+
+        public Santa(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    static class Distance implements Comparable<Distance> {
+        int d;
+        int x;
+        int y;
+
+        public Distance(int d, int x, int y) {
+            this.d = d;
+            this.x = x;
+            this.y = y;
+        }
+
+        @Override
+        public int compareTo(Distance o) {
+            if (this.d != o.d) {
+                return this.d - o.d;
+            }
+            if (this.x != o.x) {
+                return o.x - this.x;
+            }
+            return o.y - this.y;
+        }
+
+    }
+
     // 상우하좌
     static int[] dx = {-1, 0, 1, 0};
     static int[] dy = {0, 1, 0, -1};
@@ -168,7 +169,7 @@ public class CodeTree_Revolution_Rudolf {
                 lastY += moveY;
             }
 
-            // 연쇄적으로 충돌이 일어난 마지막 위치에서부터 시작해서 산타르 ㄹ이동시킴
+            // 연쇄적으로 충돌이 일어난 마지막 위치에서부터 시작해서 산타를 이동시킴
             while (!(lastX == firstX && lastY == firstY)) {
                 int prevX = lastX - moveX;
                 int prevY = lastY - moveY;

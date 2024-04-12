@@ -89,7 +89,7 @@ public class CodeTree_Knight_of_Kingdom {
                     continue;
                 }
 
-                // 이동하려는 위치에 다른 기사가 있다면 그 기사도 함꼐 연쇄적으로 밀려난다.
+                // 이동하려는 위치에 다른 기사가 있다면 그 기사도 함께 연쇄적으로 밀려난다.
                 if(!checkMovable(prevKnight-1, d)){
                     return false;
                 }
@@ -178,7 +178,7 @@ public class CodeTree_Knight_of_Kingdom {
 
     static int countTrap(int i){
         int cnt = 0;
-        // 해당 기사가 이동한 위치에서 w x h 직사각형 내 존재하는 함정 개수 만큼 피해 바ftod
+        // 해당 기사가 이동한 위치에서 w x h 직사각형 내 존재하는 함정 개수 만큼 피해 발생
         for(int r=knights[i].r; r<knights[i].r+knights[i].h; r++){
             for(int c = knights[i].c; c<knights[i].c+knights[i].w; c++){
                 if(isWall(r,c)){
