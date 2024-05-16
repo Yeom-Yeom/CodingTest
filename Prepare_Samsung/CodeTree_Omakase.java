@@ -1,3 +1,5 @@
+package Prepare_Samsung;
+
 import java.util.*;
 public class CodeTree_Omakase {
     public static int L,Q;
@@ -84,7 +86,7 @@ public class CodeTree_Omakase {
             exit_time.put(name,0);
 
             for(Query q : p_queries.get(name)){
-    ㅌ            // 만약 초밥이 사람이 등장하기 전에 미리 주어진 상황이라면
+                // 만약 초밥이 사람이 등장하기 전에 미리 주어진 상황이라면
                 int time_to_removed = 0;
                 if(q.t < entry_time.get(name)){
                     // entry_time 때의 스시 위치를 구한다.
