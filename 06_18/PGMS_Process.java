@@ -1,5 +1,5 @@
 import java.util.*;
-public class PGSM_Process {
+public class PGMS_Process {
     public static void main(String[] args) {
         System.out.println(solution(new int[]{2, 1, 3, 2}, 2));
     }
