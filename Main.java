@@ -1,21 +1,28 @@
 import java.util.*;
-public class Main {
-    public static int[] dp = new int[1000001];
-    public static void main(String[] args) {
+public class Main{
+    static Integer[] dp;
+    public static void main(String[] args){
+        int n;
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        dp[0] = 0;
-        dp[1] = 1;
-        dp[2] = 2;
-        for(int i=3; i<dp.length; i++){
-            dp[i] = -1;
-        }
-        System.out.println(Tile(n));
+        n = sc.nextInt();
+        dp = new Integer[n+1];
+        dp[0]=dp[1]=0;
+        System.out.println(recur(n));
     }
-
-    public static int Tile(int n){
-        if(dp[n] == -1){
-            dp[n] = (Tile(n-1)+Tile(n-2))%15746;
+    static int recur(int n){
+        if(dp[n] == null){
+            if(n%6==0){
+                dp[n] = Math.min(recur(n-1), Math.min(recur(n/3), recur(n/2)))+1;
+            }
+            else if(n%3==0){
+                dp[n] = Math.min(recur(n/3), recur(n-1))+1;
+            }
+            else if(n%2==0){
+                dp[n] = Math.min(recur(n/2), recur(n-1))+1;
+            }
+            else{
+                dp[n] = recur(n-1)+1;
+            }
         }
         return dp[n];
     }
